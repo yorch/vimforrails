@@ -84,9 +84,7 @@ fun! SetupVAM()
   endif
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
-"≈≈≈≈≈≈≈≈≈ PLUGINS HERE ≈≈≈≈≈≈≈≈≈≈≈≈≈
-"
-
+"≈≈≈≈≈≈≈≈≈ INSTALL PLUGINS HERE ≈≈≈≈≈≈≈≈≈≈≈≈≈ (alt-x to find this) 
   " Tell VAM which plugins to fetch & load:
   call vam#ActivateAddons([
 \ 'tlib',
@@ -108,7 +106,7 @@ fun! SetupVAM()
 \ 'rails',
 \ 'SuperTab%1643',
 \ 'tComment',
-\ 'ZoomWin',
+\ 'EasyMotion',
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
 \ 'ZenCoding',
@@ -120,6 +118,8 @@ fun! SetupVAM()
 
 endfun
 
+" \ 'ZoomWin', really messes up saving for me. Forces ! in order to save because file exists?
+"
 call SetupVAM()
 
 " END VAM
@@ -167,7 +167,9 @@ call SetupVAM()
 
 " ZoomWin
 "   maximizes current window and then restores
-  nnoremap <c-o> :silent :call ZoomWin()<cr>
+"   maximizes current window and then restores
+"   TODO remove this section. check note at insert of plugin above
+  " nnoremap <c-o> :silent :call ZoomWin()<cr>
 
 " TComment
 "    <c-_><c-_>   :: :TComment
