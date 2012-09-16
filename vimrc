@@ -108,6 +108,7 @@ fun! SetupVAM()
 \ 'rails',
 \ 'SuperTab%1643',
 \ 'tComment',
+\ 'ZoomWin',
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
 \ 'ZenCoding',
@@ -163,6 +164,10 @@ call SetupVAM()
     let g:snipMate.scope_aliases = {}
     let g:snipMate.scope_aliases['javascript'] = 'javascript,javascript-jquery'
     let g:snipMate.scope_aliases['sass'] = 'css'
+
+" ZoomWin
+"   maximizes current window and then restores
+  nnoremap <c-o> :silent :call ZoomWin()<cr>
 
 " TComment
 "    <c-_><c-_>   :: :TComment
