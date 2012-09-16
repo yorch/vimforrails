@@ -96,6 +96,7 @@ fun! SetupVAM()
 \ 'Diablo3',
 \ 'Sass',
 \ 'Command-T',
+\ 'jQuery',
 \ 'Gundo',
 \ 'The_NERD_tree',
 \ 'FuzzyFinder',
