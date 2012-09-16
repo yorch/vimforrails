@@ -1,11 +1,11 @@
 # VIM for RAILS
 
-### What are you talking about?
+### What is this?
 
 I used to use TextMate, which was great, but then I moved to Sublime which was
 awesome, and then I heard about VIM. At first, I thought anyone using VIM was
 crazy, but after reading more and more about it, I think if you're programming long enough, you'll eventually switch
-to VIM (or eMacs)
+to VIM (or eMacs). So why not switch sooner rather than later. You do plan on being a programmer for a long time, no?
 
 Unfortunately, setting up VIM for Rails is a pain in the a$$S!
 
@@ -17,19 +17,28 @@ Disclaimer: I've done very little work except for setting up this repo. I did no
 
 1. Clone this repo
 
-    You may also want to clone my snippets fork in order to customize them for your use. If you do, you will want to change the settings in the vimrc to reflect that change.
+    You may also want to fork my snippets fork in order to customize them for your use. If you do, you will want to change the github username in the vimrc to reflect that change.
 
 2. Run
 ```
 ruby activate.rb
 ```
 
-    Be warned: this will overwrite any existing .vimrc, .gvimrc or .vim/ files you have in your home directory. 
+    Be warned: this will overwrite any existing .vimrc, .gvimrc or .vim/ files you have in your home directory. (I did not write activate.rb either, but I am good at copy/paste. :) )
 
 
-3. Install dependencies, like git and hg for VAM (vim-addons-manager). You will also need syntax checkers installed if you want to use that feature such as jslint for javascript.
+3. Install dependencies, like git and hg needed by VAM (vim-addons-manager). You will also need syntax checkers installed if you want to use that feature. For example: jslint for javascript.
 
-    Brew is your friend with Mac. Use Aptitude with Linux (at least ubuntu-based distros)
+    Homebrew is your friend with Mac. 
+    ```
+    brew install git
+    brew install hg
+    ```
+    Use Aptitude with Linux (at least ubuntu-based distros)
+    ```
+    sudo aptitude install git-core
+    sudo aptitude install mercurial
+    ```
 
 4. Run 
 ```
