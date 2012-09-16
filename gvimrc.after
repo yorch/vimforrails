@@ -8,7 +8,7 @@ end
 set guioptions-=T  "remove toolbar
 set guioptions-=m  "remove menu
 set guioptions-=r  "remove rightscrollbar
-set guioptions-=l  "remove leftscrollbar
+set go-=L  "remove leftscrollbar
 
 set lines=67
 set columns=200
