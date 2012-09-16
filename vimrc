@@ -27,9 +27,10 @@
 "   Standard is <c-y>, (comma) but too hard to type
   let g:user_zen_leader_key = '<c-z>'
 
-"--------------------------------------------------------------------------------
-"--------------------------------------------------------------------------------
-" VAM autoloads bundles easily by specifying name (should move to external file)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM ADDONS MANAGER
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " VAM autoloads bundles easily by specifying name (should move to external file)
 
 fun! EnsureVamIsOnDisk(vam_install_path)
   " windows users may want to use http://mawercer.de/~marc/vam/index.php
