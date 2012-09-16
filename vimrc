@@ -95,11 +95,10 @@ fun! SetupVAM()
 \ 'quickfixsigns',
 \ 'Diablo3',
 \ 'Sass',
-\ 'Command-T',
 \ 'jQuery',
+\ 'ctrlp',
 \ 'Gundo',
 \ 'The_NERD_tree',
-\ 'FuzzyFinder',
 \ 'ragtag',
 \ 'YankRing',
 \ 'ack',
@@ -191,16 +190,6 @@ call SetupVAM()
 
   nnoremap <leader>/ :Ack ''<left>
 
-" FuzzyFinder
-  let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,*.class,*.pyc"
-  let g:fuzzy_ceiling = 50000
-  let g:fuzzy_matching_limit = 10
-  nnoremap <space> :FufBuffer<CR>
-
-  " Pretty colors for fuzzyfinder menus
-    highlight Pmenu ctermfg=black ctermbg=gray
-    highlight PmenuSel ctermfg=black ctermbg=white
-
 " ragTag
    let g:ragtag_global_maps = 1
 
@@ -220,31 +209,9 @@ call SetupVAM()
     "     <C-X>#        <meta http-equiv="Content-Type" ... />    *ragtag-CTRL-X_#*
     "     <C-X>$        <script src="/javascripts/^.js"></script> *ragtag-CTRL-X_$*
 
-" CommandT
-  map <silent> <Leader><Space> :CommandT<CR>
-    "    <BS>        delete the character to the left of the cursor
-    "    <Del>       delete the character at the cursor
-    "    <Left>      move the cursor one character to the left
-    "    <C-h>       move the cursor one character to the left
-    "    <Right>     move the cursor one character to the right
-    "    <C-l>       move the cursor one character to the right
-    "    <C-a>       move the cursor to the start (left)
-    "    <C-e>       move the cursor to the end (right)
-    "    <C-u>       clear the contents of the prompt
-
-    "    <Tab>       change focus to the file listing
-    "    <C-CR>      open the selected file in a new split window
-    "    <C-s>       open the selected file in a new split window
-    "    <C-v>       open the selected file in a new vertical split window
-    "    <C-t>       open the selected file in a new tab
-    "    <C-j>       select next file in the file listing
-    "    <C-n>       select next file in the file listing
-    "    <Down>      select next file in the file listing
-    "    <C-k>       select previous file in the file listing
-    "    <C-p>       select previous file in the file listing
-    "    <Up>        select previous file in the file listing
-    "    <C-f>       flush the cache (see |:CommandTFlush| for details)
-    "    <C-c>       cancel (dismisses file listing)
+" CtrlP
+  map <leader><space> :CtrlP<cr>
+  map <space> :CtrlPBuffer<cr>
 
 " NERDTree
   let NERDTreeIgnore=['\.pyc']
