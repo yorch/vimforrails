@@ -1,7 +1,13 @@
-" VIMRC of enric ribas i susany
-"
-" thanks to everyone I stole stuff from :)
-" I stand on the shoulders of giants.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM FOR RAILS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    " a .vimrc files customized for use with Ruby on Rails
+
+    " --enric ribas i susany
+
+    " thanks to everyone I stole stuff from :)
+    " I stand on the shoulders of giants.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STANDARD SETTINGS
@@ -27,9 +33,10 @@
 "   Standard is <c-y>, (comma) but too hard to type
   let g:user_zen_leader_key = '<c-z>'
 
-"--------------------------------------------------------------------------------
-"--------------------------------------------------------------------------------
-" VAM autoloads bundles easily by specifying name (should move to external file)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM ADDONS MANAGER
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " VAM autoloads bundles easily by specifying name (should move to external file)
 
 fun! EnsureVamIsOnDisk(vam_install_path)
   " windows users may want to use http://mawercer.de/~marc/vam/index.php
