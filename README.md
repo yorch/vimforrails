@@ -2,12 +2,16 @@
 
 ### What is this?
 
+It's an entire VIM 'distro' in one file including all the bundles I use for Ruby on Rails work.
+
+### Why?
+
 I used to use TextMate, which was great, but then I moved to Sublime which was
 awesome, and then I heard about VIM. At first, I thought anyone using VIM was
 crazy, but after reading more and more about it, I think if you're programming long enough, you'll eventually switch
 to VIM (or eMacs). So why not switch sooner rather than later. You do plan on being a programmer for a long time, no?
 
-Unfortunately, setting up VIM for Rails is a pain in the a$$S!
+Unfortunately, setting up VIM for Rails is a pain in the a$$S! Even with other solutions, you are dealing with cloning, submodules, etc. Yuck. Plus all the research to find the bundles you need to become productive. Annoying. You have real work to do.
 
 So I created this, so anyone new could quickly get up and running with VIM (with one file, read below).
 
@@ -46,6 +50,11 @@ ruby activate.rb
 ```
 vim
 ```
+
+OR...
+
+    Copy/paste the vimrc file into a .vimrc file yourself. It's that easy.
+
 
 VAM will download and setup .vim for all addons. 
 
