@@ -15,8 +15,9 @@ Disclaimer: I've done very little work except for setting up this repo. I did no
 
 ### How?
 
-1. Clone this repo
+1. Fork this repo
 
+    You will want to customize things for yourself, trust me. Fork it.
     You may also want to fork my snippets fork in order to customize them for your use. If you do, you will want to change the github username in the vimrc to reflect that change.
 
 2. Run
