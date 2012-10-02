@@ -159,7 +159,6 @@ call SetupVAM()
     nnoremap <leader>sc :SnippetsEditCSS<CR>
 
   " Filetypes
-  "   Why isn't this better by default? ughh..
     let g:snipMate = {}
     let g:snipMate.scope_aliases = {}
     let g:snipMate.scope_aliases['javascript'] = 'javascript,javascript-jquery'
@@ -168,8 +167,8 @@ call SetupVAM()
 " ZoomWin
 "   maximizes current window and then restores
 "   maximizes current window and then restores
-"   TODO remove this section. check note at insert of plugin above
-  " nnoremap <c-o> :silent :call ZoomWin()<cr>
+"     nnoremap <c-o> :silent :call ZoomWin()<cr>
+"   NOTE: ZoomWin does not work well and is therefore not installed.
 
 " TComment
 "    <c-_><c-_>   :: :TComment
@@ -210,10 +209,12 @@ call SetupVAM()
     "     <C-X>$        <script src="/javascripts/^.js"></script> *ragtag-CTRL-X_$*
 
 " CtrlP
+"   File Navigation and Open file navigation (buffers)
   map <leader><space> :CtrlP<cr>
   map <space> :CtrlPBuffer<cr>
 
 " NERDTree
+"   File Navigation via tree view
   let NERDTreeIgnore=['\.pyc']
   map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
   map <silent> <LocalLeader>nr :NERDTree<CR>
@@ -249,7 +250,6 @@ call SetupVAM()
 "   undo tree
   nnoremap <F4> :GundoToggle<CR>
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -258,7 +258,6 @@ call SetupVAM()
   endif
   " feel free to choose :set background=light for a different style
   set background=dark
-  " this doesn't work until VIM starts up!!?!?!?
   colorscheme diablo3
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
