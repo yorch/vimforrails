@@ -171,15 +171,16 @@ call SetupVAM()
 "   NOTE: ZoomWin does not work well and is therefore not installed.
 
 " TComment
-"    <c-_><c-_>   :: :TComment
-"    <c-_><space> :: :TComment <QUERY COMMENT-BEGIN ?COMMENT-END>
-"    <c-_>b       :: :TCommentBlock
-"    <c-_>a       :: :TCommentAs <QUERY COMMENT TYPE>
-"    <c-_>n       :: :TCommentAs &filetype <QUERY COUNT>
-"    <c-_>s       :: :TCommentAs &filetype_<QUERY COMMENT SUBTYPE>
-"    <c-_>i       :: :TCommentInline
-"    <c-_>r       :: :TCommentRight
-"    <c-_>p       :: Comment the current inner paragraph
+"    confusing but it's control-dash
+"    <c--><c-->   :: :TComment
+"    <c--><space> :: :TComment <QUERY COMMENT-BEGIN ?COMMENT-END>
+"    <c-->b       :: :TCommentBlock
+"    <c-->a       :: :TCommentAs <QUERY COMMENT TYPE>
+"    <c-->n       :: :TCommentAs &filetype <QUERY COUNT>
+"    <c-->s       :: :TCommentAs &filetype_<QUERY COMMENT SUBTYPE>
+"    <c-->i       :: :TCommentInline
+"    <c-->r       :: :TCommentRight
+"    <c-->p       :: Comment the current inner paragraph
 
 " Ack
 "   better than grep
