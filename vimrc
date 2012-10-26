@@ -22,7 +22,7 @@
 " Turn on specific actions for different types of files
   filetype plugin indent on
 
-" redefine leader. must be before all uses of leader
+" redefine leader. must be before all uses cleader
   let mapleader = ","
   let maplocalleader = ","
 
@@ -31,7 +31,7 @@
 "     unfortunately must come before Zencoding loaded
 " ZenCoding
 "   Standard is <c-y>, (comma) but too hard to type
-  let g:user_zen_leader_key = '<c-z>'
+  let g:user_zen_leader_key = '<c-q>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM ADDONS MANAGER
@@ -84,7 +84,7 @@ fun! SetupVAM()
   endif
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
-"≈≈≈≈≈≈≈≈≈ INSTALL PLUGINS HERE ≈≈≈≈≈≈≈≈≈≈≈≈≈ (alt-x to find this) 
+"≈≈≈≈≈≈≈≈≈ INSTALL PLUGINS HERE ≈≈≈≈≈≈≈≈≈≈≈≈≈ (alt-x to find this)
   " Tell VAM which plugins to fetch & load:
   call vam#ActivateAddons([
 \ 'tlib',
@@ -93,7 +93,6 @@ fun! SetupVAM()
 \ 'surround',
 \ 'checksyntax',
 \ 'quickfixsigns',
-\ 'Diablo3',
 \ 'Sass',
 \ 'jQuery',
 \ 'ctrlp',
@@ -110,6 +109,8 @@ fun! SetupVAM()
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
 \ 'ZenCoding',
+\ 'Diablo3',
+\ 'Solarized'
 \ ], {'auto_install' : 0})
 
   " How to find addon names?
@@ -164,11 +165,14 @@ call SetupVAM()
     let g:snipMate.scope_aliases['javascript'] = 'javascript,javascript-jquery'
     let g:snipMate.scope_aliases['sass'] = 'css'
 
+" EasyMotion
+"   <leader><leader><motion commands>
+
 " ZoomWin
 "   maximizes current window and then restores
 "   maximizes current window and then restores
 "     nnoremap <c-o> :silent :call ZoomWin()<cr>
-"   NOTE: ZoomWin does not work well and is therefore not installed.
+  " NOTE: ZoomWin does not work well and is therefore not installed.
 
 " TComment
 "    confusing but it's control-dash
@@ -217,9 +221,11 @@ call SetupVAM()
 " NERDTree
 "   File Navigation via tree view
   let NERDTreeIgnore=['\.pyc']
-  map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-  map <silent> <LocalLeader>nr :NERDTree<CR>
-  map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+  map <silent> <LocalLeader>nt  :NERDTreeToggle<CR>
+  map <f3>                      :NERDTreeToggle<CR>
+  map <silent> <LocalLeader>nr  :NERDTree<CR>
+  map <silent> <LocalLeader>nf  :NERDTreeFind<CR>
+  map <silent> <LocalLeader>ntc :NERDTreeClose<CR>
 
 " Align
 "   aligns text based on characters passed
@@ -260,6 +266,7 @@ call SetupVAM()
   " feel free to choose :set background=light for a different style
   set background=dark
   colorscheme diablo3
+  colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -302,7 +309,7 @@ call SetupVAM()
   set cursorline
   set ttyfast
   set modelines=0
-  set number
+  set relativenumber
   set backspace=indent,eol,start
   set textwidth=0
   set nosmartindent
@@ -321,15 +328,13 @@ call SetupVAM()
   let html_use_css=1
   let html_number_lines=0
   let html_no_pre=1
+  let coffee_no_trailing_space_error = 1
 
   let g:gist_clip_command = 'pbcopy'
   let g:gist_detect_filetype = 1
-
   let g:rubycomplete_buffer_loading = 1
-
   let g:no_html_toolbar = 'yes'
 
-  let coffee_no_trailing_space_error = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -362,6 +367,28 @@ augroup vimrcEx
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RELATIVE LINE NUMBERS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <f6> :call NumberToggle()<cr>
+
+augroup relative_lines
+  autocmd FocusLost   * :set number
+  autocmd FocusGained * :set relativenumber
+
+  autocmd InsertEnter * :set number
+  autocmd InsertLeave * :set relativenumber
+augroup END
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! RenameFile()
@@ -373,6 +400,7 @@ function! RenameFile()
         redraw!
     endif
 endfunction
+
 map <leader>rn :call RenameFile()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -559,11 +587,6 @@ if version >= 703
   set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 endif
 set undolevels=1000 "maximum number of changes that can be undone
-
-
-
-
-
 
 " the end of enric's vimrc. thanks.
 "
