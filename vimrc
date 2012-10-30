@@ -28,11 +28,6 @@
 
   compiler ruby
 
-"     unfortunately must come before Zencoding loaded
-" ZenCoding
-"   Standard is <c-y>, (comma) but too hard to type
-  let g:user_zen_leader_key = '<c-q>'
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM ADDONS MANAGER
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,7 +105,8 @@ fun! SetupVAM()
 \ 'github:enricribas/snipmate-snippets',
 \ 'ZenCoding',
 \ 'Diablo3',
-\ 'Solarized'
+\ 'Solarized',
+\ 'Zenburn'
 \ ], {'auto_install' : 0})
 
   " How to find addon names?
@@ -167,6 +163,9 @@ call SetupVAM()
 
 " EasyMotion
 "   <leader><leader><motion commands>
+
+" ZenCoding
+"   Standard is <c-y>, (comma)
 
 " ZoomWin
 "   maximizes current window and then restores
