@@ -104,6 +104,7 @@ fun! SetupVAM()
 \ 'tComment',
 \ 'EasyMotion',
 \ 'matchit.zip',
+\ 'Tagbar',
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
 \ 'ZenCoding',
@@ -196,6 +197,12 @@ call SetupVAM()
 "    <c-->i       :: :TCommentInline
 "    <c-->r       :: :TCommentRight
 "    <c-->p       :: Comment the current inner paragraph
+
+" TagBar ctags
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations
+"let g:tagbar_width=26                          " Default is 40, seems too wide
+" Display panel with y (or ,y)
+noremap <silent> <Leader>m :TagbarOpenAutoClose<cr>
 
 " Ack
 "   better than grep
@@ -429,11 +436,11 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>rs :call RunTestFile()<cr>
-map <leader>T :call RunNearestTest()<cr>
-map <leader>ta :call RunTests('')<cr>
-map <leader>c :w\|:!script/features<cr>
-map <leader>w :w\|:!script/features --profile wip<cr>
+map <leader>RS :call RunTestFile()<cr>
+map <leader>rs :call RunNearestTest()<cr>
+map <leader>rsa :call RunTests('')<cr>
+"map <leader>c :w\|:!script/features<cr>
+"map <leader>w :w\|:!script/features --profile wip<cr>
 
 function! RunTestFile(...)
     if a:0
