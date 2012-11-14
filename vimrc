@@ -86,6 +86,7 @@ fun! SetupVAM()
 \ 'delimitMate',
 \ 'Align%294',
 \ 'surround',
+\ 'Powerline',
 \ 'checksyntax',
 \ 'quickfixsigns',
 \ 'Sass',
@@ -96,6 +97,7 @@ fun! SetupVAM()
 \ 'ragtag',
 \ 'YankRing',
 \ 'ack',
+\ 'vim-indent-object',
 \ 'fugitive',
 \ 'rails',
 \ 'SuperTab%1643',
@@ -163,6 +165,15 @@ call SetupVAM()
 
 " EasyMotion
 "   <leader><leader><motion commands>
+
+" Ack
+"   o    to open (same as enter)
+"   go   to preview file (open but maintain focus on ack.vim results)
+"   t    to open in new tab
+"   T    to open in new tab silently
+"   v    to open in vertical split
+"   gv   to open in vertical split silently
+"   q    to close the quickfix window
 
 " ZenCoding
 "   Standard is <c-y>, (comma)
@@ -263,9 +274,9 @@ call SetupVAM()
     set t_Co=256
   endif
   " feel free to choose :set background=light for a different style
-  set background=dark
-  colorscheme diablo3
+"  colorscheme diablo3
   colorscheme solarized
+  set background=dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
