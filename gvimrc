@@ -1,5 +1,5 @@
 if has("mac")
-  set guifont=Source\ Code\ Pro:h12.00
+  set guifont=CPMono_v07:h8.00
   set fuopt=maxhorz,maxvert
 else
   set gfn=DejaVu\ Sans\ Mono\ Book\ 10

@@ -103,6 +103,7 @@ fun! SetupVAM()
 \ 'SuperTab%1643',
 \ 'tComment',
 \ 'EasyMotion',
+\ 'matchit.zip',
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
 \ 'ZenCoding',
