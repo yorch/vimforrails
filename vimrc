@@ -101,6 +101,7 @@ fun! SetupVAM()
 \ 'fugitive',
 \ 'rails',
 \ 'SuperTab%1643',
+\ 'dwm',
 \ 'tComment',
 \ 'EasyMotion',
 \ 'matchit.zip',
@@ -130,6 +131,7 @@ call SetupVAM()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Snippets (SnipMate)
+"
 "   completes common code snippets after pressing tab
 "
 " NOTE:
@@ -165,6 +167,13 @@ call SetupVAM()
     let g:snipMate.scope_aliases['javascript'] = 'javascript,javascript-jquery'
     let g:snipMate.scope_aliases['sass'] = 'css'
 
+" Indent Text Object
+"
+" Selects text based on indentation level
+"  <count>ai         (A)n (I)ndentation level and line above.
+"  <count>ii         (I)nner (I)ndentation level (no line above).
+"  <count>aI         (A)n (I)ndentation level and lines above/below.
+
 " EasyMotion
 "   <leader><leader><motion commands>
 
@@ -185,6 +194,22 @@ call SetupVAM()
 "   maximizes current window and then restores
 "     nnoremap <c-o> :silent :call ZoomWin()<cr>
   " NOTE: ZoomWin does not work well and is therefore not installed.
+
+" DWM Tiling Window Management
+  " This works better than ZoonWIn
+  " nnoremap <C-J> <C-W>w
+  " nnoremap <C-K> <C-W>W
+
+  "<C-,> DWMRotateCounterclockwise " Doesn't seem to work
+  "<C-.> DWMRotateClockwise " Doesn't seem to work
+
+  "<C-N> Create new blank window
+  "<C-C> Close current window
+  "<C-@> Set focus to main window
+  "<C-Space> Move current window to main window
+
+  "<C-L> Increase size of main window
+  "<C-H> Decrease size of main window
 
 " TComment
 "    confusing but it's control-dash
@@ -515,15 +540,10 @@ endfunction
 
 " Window Movement and Control
   " Window Switching
-    nnoremap <C-h> <C-w>h
-    nnoremap <C-j> <C-w>j
-    nnoremap <C-k> <C-w>k
-    nnoremap <C-l> <C-w>l
-
-  " resize windows more simply
-    "  currently only for horizontal splits. TODO
-    nnoremap + <C-w>+
-    nnoremap = <C-w>-
+  nnoremap <left>  <C-w>h
+  nnoremap <down>  <C-w>j
+  nnoremap <up>    <C-w>k
+  nnoremap <right> <C-w>l
 
 " Paste line after current line
   nnoremap <leader>p :put<cr>
@@ -556,8 +576,8 @@ endfunction
   nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " move line up and down
-  nnoremap _ ddkP
-  nnoremap - ddp
+  nnoremap <C-UP> ddkP
+  nnoremap <C-DOWN> ddp
 
 " White Space
   " remove
