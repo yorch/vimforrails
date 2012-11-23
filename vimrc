@@ -260,6 +260,7 @@ noremap <silent> <Leader>m :TagbarOpenAutoClose<cr>
 "   File Navigation and Open file navigation (buffers)
   map <leader><space> :CtrlP<cr>
   map <space> :CtrlPBuffer<cr>
+  map <leader>cpr :CtrlPClearAllCaches<CR>
 
 " NERDTree
 "   File Navigation via tree view
