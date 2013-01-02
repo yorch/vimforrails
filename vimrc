@@ -185,6 +185,11 @@ call SetupVAM()
 "   v    to open in vertical split
 "   gv   to open in vertical split silently
 "   q    to close the quickfix window
+"
+"   Filter by type
+"   --ruby 'search_regex'
+"
+"   css, html, js, etc..
 
 " ZenCoding
 "   Standard is <c-y>, (comma)
@@ -196,7 +201,7 @@ call SetupVAM()
   " NOTE: ZoomWin does not work well and is therefore not installed.
 
 " DWM Tiling Window Management
-  " This works better than ZoonWIn
+  " This works better than ZoonWin
   " nnoremap <C-J> <C-W>w
   " nnoremap <C-K> <C-W>W
 
@@ -301,6 +306,13 @@ noremap <silent> <Leader>m :TagbarOpenAutoClose<cr>
 "   undo tree
   nnoremap <F4> :GundoToggle<CR>
 
+" Paste previous insert text
+"   <c-a> in insert mode
+"   . register ie. ".p
+
+" Search and Replace word under cursor
+  nnoremap <Leader>* :%s/\<<C-r><C-w>\>/
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -308,9 +320,9 @@ noremap <silent> <Leader>m :TagbarOpenAutoClose<cr>
     set t_Co=256
   endif
   " feel free to choose :set background=light for a different style
-"  colorscheme diablo3
-  colorscheme solarized
+  " colorscheme solarized
   set background=dark
+  colorscheme diablo3
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -536,7 +548,7 @@ endfunction
 
 " Enter in normal mode adds newline (because I think it makes sense)
   nnoremap <Return> A<Return><Esc>
-  nnoremap <S-Return> 0O<Esc>
+  nnoremap <S-Return> 0O<Esc> "This doesn't seem to work in terminal VIM
 
 
 " Window Movement and Control
