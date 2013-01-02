@@ -51,21 +51,18 @@ ruby activate.rb
 vim
 ```
 
-OR...
 
-    Copy/paste the vimrc file into a .vimrc file yourself. It's that easy.
-
-
-VAM will download and setup .vim for all addons. 
+VAM will download and setup VIM for all addons. 
 
 Let me repeat that. 
 
-VAM will download and setup .vim for all addons!
+VAM will download and setup VIM for all addons!
 
 No cloning, no submodules to manage. Nothing. Everything in one file!
 
-NotaBene: You may have to try multiple
-times for it to work properly. If you get stuck, press arrow-up. Weird. I
-don't know why.
+Warning: You may have to run the vim command multiple times for it to work properly. 
+If you get stuck, press arrow-up. Weird. I don't know why. I have had better luck using 
+terminal VIM for the initial setup and then once everything is set up switching to 
+MacVIM if you prefer to use the mouse. 
 
-Good luck, and remember this is a work in progress since I am new to VIM.
+Good luck, and remember this is a work in progress since I am also new to VIM.
