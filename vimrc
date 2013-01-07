@@ -86,7 +86,6 @@ fun! SetupVAM()
 \ 'delimitMate',
 \ 'Align%294',
 \ 'surround',
-\ 'Powerline',
 \ 'checksyntax',
 \ 'quickfixsigns',
 \ 'Sass',
@@ -553,10 +552,10 @@ endfunction
 
 " Window Movement and Control
   " Window Switching
-  nnoremap <left>  <C-w>h
-  nnoremap <down>  <C-w>j
-  nnoremap <up>    <C-w>k
-  nnoremap <right> <C-w>l
+  nnoremap <S-left>  <C-w>h
+  nnoremap <S<down>  <C-w>j
+  nnoremap <S<up>    <C-w>k
+  nnoremap <S<right> <C-w>l
 
 " Paste line after current line
   nnoremap <leader>p :put<cr>
