@@ -554,9 +554,9 @@ endfunction
 " Window Movement and Control
   " Window Switching
   nnoremap <S-left>  <C-w>h
-  nnoremap <S<down>  <C-w>j
-  nnoremap <S<up>    <C-w>k
-  nnoremap <S<right> <C-w>l
+  nnoremap <S-down>  <C-w>j
+  nnoremap <S-up>    <C-w>k
+  nnoremap <S-right> <C-w>l
 
 " Paste line after current line
   nnoremap <leader>p :put<cr>
