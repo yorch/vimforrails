@@ -103,6 +103,7 @@ fun! SetupVAM()
 \ 'dwm',
 \ 'tComment',
 \ 'EasyMotion',
+\ 'powerline',
 \ 'matchit.zip',
 \ 'Tagbar',
 \ 'github:garbas/vim-snipmate',
