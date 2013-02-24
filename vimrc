@@ -89,6 +89,7 @@ fun! SetupVAM()
 \ 'checksyntax',
 \ 'quickfixsigns',
 \ 'Sass',
+\ 'Handlebars',
 \ 'jQuery',
 \ 'ctrlp',
 \ 'Gundo',
