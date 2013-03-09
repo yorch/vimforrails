@@ -28,6 +28,19 @@
 
   compiler ruby
 
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VUNDLE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  " Vundle manages vim addons
+  " let Vundle manage Vundle
+  Bundle 'gmarik/vundle'
+
+  " Packages Installed (changes require BundleInstall)
+  Bundle 'airblade/vim-gitgutter'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM ADDONS MANAGER
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,7 +100,6 @@ fun! SetupVAM()
 \ 'Align%294',
 \ 'surround',
 \ 'checksyntax',
-\ 'quickfixsigns',
 \ 'Sass',
 \ 'Handlebars',
 \ 'jQuery',
