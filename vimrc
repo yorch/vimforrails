@@ -40,6 +40,8 @@
 
   " Packages Installed (changes require BundleInstall)
   Bundle 'airblade/vim-gitgutter'
+  Bundle 'Powerline'
+  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM ADDONS MANAGER
@@ -116,7 +118,6 @@ fun! SetupVAM()
 \ 'dwm',
 \ 'tComment',
 \ 'EasyMotion',
-\ 'powerline',
 \ 'matchit.zip',
 \ 'Tagbar',
 \ 'github:garbas/vim-snipmate',
@@ -354,7 +355,7 @@ noremap <silent> <Leader>m :TagbarOpenAutoClose<cr>
 " code folding
   set foldmethod=syntax
   set foldlevel=9999
-  set foldcolumn=2
+  set foldcolumn=0
 
 " allow unsaved background buffers and remember marks/undo for them
   set hidden
