@@ -243,10 +243,10 @@ call SetupVAM()
 "    <c-->p       :: Comment the current inner paragraph
 
 " TagBar ctags
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations
-"let g:tagbar_width=26                          " Default is 40, seems too wide
-" Display panel with y (or ,y)
-noremap <silent> <Leader>m :TagbarOpenAutoClose<cr>
+  " displays list of functions for quick navigation
+  let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations (brew install ctags-exuberant)
+  "let g:tagbar_width=26                          " Default is 40, seems too wide
+  noremap <silent> <f7> :TagbarOpenAutoClose<cr>
 
 " Ack
 "   better than grep
