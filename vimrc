@@ -547,6 +547,9 @@ endfunction
 " Better Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Go to middle of line
+  map gm :call cursor(0, virtcol('$')/2)<CR>
+
 " Annoyed with pressing shift so often
   nnoremap ; :
   " Unfortunately this is a bad idea which breaks everything
