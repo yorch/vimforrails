@@ -40,7 +40,8 @@
 
   " Packages Installed (changes require BundleInstall)
   Bundle 'airblade/vim-gitgutter'
-  Bundle 'Powerline'
+  Bundle 'Lokaltog/vim-powerline'
+
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
