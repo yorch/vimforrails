@@ -28,12 +28,13 @@
 
   compiler ruby
 
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VUNDLE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+
   " Vundle manages vim addons
   " let Vundle manage Vundle
   Bundle 'gmarik/vundle'
@@ -41,6 +42,7 @@
   " Packages Installed (changes require BundleInstall)
   Bundle 'airblade/vim-gitgutter'
   Bundle 'Lokaltog/vim-powerline'
+  Bundle 'sjl/gundo.vim'
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
@@ -107,7 +109,6 @@ fun! SetupVAM()
 \ 'Handlebars',
 \ 'jQuery',
 \ 'ctrlp',
-\ 'Gundo',
 \ 'The_NERD_tree',
 \ 'ragtag',
 \ 'YankRing',
