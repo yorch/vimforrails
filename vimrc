@@ -43,6 +43,12 @@
   Bundle 'airblade/vim-gitgutter'
   Bundle 'Lokaltog/vim-powerline'
   Bundle 'sjl/gundo.vim'
+  Bundle 'ragtag.vim'
+  Bundle 'rails.vim'
+  Bundle 'fugitive.vim'
+  Bundle 'Solarized'
+  Bundle 'Zenburn'
+  Bundle 'Diablo3'
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
@@ -110,12 +116,9 @@ fun! SetupVAM()
 \ 'jQuery',
 \ 'ctrlp',
 \ 'The_NERD_tree',
-\ 'ragtag',
 \ 'YankRing',
 \ 'ack',
 \ 'vim-indent-object',
-\ 'fugitive',
-\ 'rails',
 \ 'SuperTab%1643',
 \ 'dwm',
 \ 'tComment',
@@ -124,10 +127,7 @@ fun! SetupVAM()
 \ 'Tagbar',
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
-\ 'ZenCoding',
-\ 'Diablo3',
-\ 'Solarized',
-\ 'Zenburn'
+\ 'ZenCoding'
 \ ], {'auto_install' : 0})
 
   " How to find addon names?
